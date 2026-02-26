@@ -30,6 +30,8 @@ The solution migrates a legacy public sector web workload into a secure, scalabl
 - Multi-region deployment operational
 - Load balancer routing correctly
 - Public access temporarily enabled for validation
+- ✅ Identity-Aware Proxy (IAP) enforced at Load Balancer layer
+- ✅ Backend services protected via OAuth2 identity validation
 
 ---
 
@@ -52,4 +54,5 @@ After removing public invoker permissions and restricting ingress to Load Balanc
 - Enforce Identity-Aware Proxy (IAP)
 - Remove public access from Cloud Run
 - Optional: Cloud Armor integration
+
 
