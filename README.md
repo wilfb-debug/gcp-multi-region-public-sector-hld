@@ -33,8 +33,23 @@ The solution migrates a legacy public sector web workload into a secure, scalabl
 
 ---
 
+## Deployment & Security Evidence
+
+### Successful Cloud Run Deployment (europe-west2)
+
+![Cloud Run Deployment Success](docs/evidence/01-cloud-run-deployment-success.png)
+
+---
+
+### Direct Cloud Run Access Blocked (After Ingress Restriction)
+
+After removing public invoker permissions and restricting ingress to Load Balancer only, direct service access returns HTTP 403 (Forbidden):
+
+![Direct Access Forbidden](docs/evidence/02-direct-access-forbidden-after-hardening.png)
+
 ## Next Phase
 
 - Enforce Identity-Aware Proxy (IAP)
 - Remove public access from Cloud Run
 - Optional: Cloud Armor integration
+
