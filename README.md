@@ -15,6 +15,47 @@ This architecture is designed to meet OFFICIAL-SENSITIVE public sector requireme
 
 ---
 
+## 🏗 Target Architecture – Multi-Region Secure Cloud Run (HA)
+
+This architecture represents the proposed target state for migrating a legacy public sector web workload into a secure, highly available Google Cloud environment.
+
+### Key Components
+
+- Global External HTTPS Load Balancer (Premium Tier / Anycast IP)
+- L7 URL Routing (URL Map)
+- Backend Service abstraction layer
+- Serverless Network Endpoint Groups (europe-west1 & europe-west2)
+- Multi-region Cloud Run deployment
+- TLS termination at Load Balancer
+- Ingress restricted to Load Balancer only
+- Planned Identity-Aware Proxy (IAP) enforcement
+
+---
+
+### 📐 Architecture Diagram
+
+![Target Architecture](docs/architecture/01-target-architecture-multi-region-cloud-run.png)
+
+---
+
+### Design Objectives
+
+- Global availability via Anycast IP
+- Regional redundancy for high availability
+- Controlled ingress to backend services
+- Centralized TLS termination
+- Phased security hardening (Public → IAP enforced)
+
+---
+
+### Current State
+
+Public access temporarily enabled for testing.
+
+### Next Phase
+
+Enforce Identity-Aware Proxy (IAP) and remove public access.
+
 ## Architecture Summary
 
 Internet traffic enters via a Global External Application Load Balancer (Premium Tier).  
