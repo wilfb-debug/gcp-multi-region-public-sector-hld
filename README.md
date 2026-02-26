@@ -49,10 +49,24 @@ After removing public invoker permissions and restricting ingress to Load Balanc
 
 ![Direct Access Forbidden](docs/evidence/02-direct-access-forbidden-after-hardening.png)
 
+---
+
+### Identity-Aware Proxy (IAP) Enforcement
+
+- IAP enabled at Load Balancer backend service layer
+- OAuth2 authentication enforced before request reaches Cloud Run
+- Only authorised Google identities granted access
+- Direct backend access blocked (403)
+
+Architecture now follows zero-trust identity perimeter model.
+
+---
+
 ## Next Phase
 
 - Enforce Identity-Aware Proxy (IAP)
 - Remove public access from Cloud Run
 - Optional: Cloud Armor integration
+
 
 
