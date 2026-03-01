@@ -1,8 +1,29 @@
 # GCP Multi-Region Public Sector Cloud Migration Framework (HLD)
 
-This project demonstrates a GDS-aligned, multi-region public sector architecture built on Google Cloud Platform (GCP).
+This project demonstrates the design and validation of a production-style, multi-region Google Cloud architecture suitable for public sector and regulated workloads.
 
-The solution migrates a legacy public sector web workload into a secure, scalable, and highly available cloud-native environment.
+The solution includes:
+
+- Global HTTPS Load Balancer
+- Google-managed SSL certificate
+- Multi-region Serverless Network Endpoint Groups (NEGs)
+- Cloud Run backend services
+- TLS termination at the edge
+- Cost-aware decommissioning strategy
+
+---
+
+## What This Demonstrates
+
+This repository validates practical capability in:
+
+- Designing global, highly available architectures
+- Implementing serverless multi-region backends
+- Configuring Google-managed SSL and TLS termination
+- Applying layered security patterns
+- Managing infrastructure lifecycle with cost awareness (FinOps mindset)
+
+All infrastructure was provisioned, validated, and decommissioned within GCP Free Tier constraints.
 
 ---
 
@@ -114,6 +135,7 @@ Next-stage enhancements for production readiness include:
 - Restricting Cloud Run ingress to internal + load balancer only
 - Applying Cloud Armor WAF policies
 - Enforcing organisation policy constraints for public endpoint prevention
+
 
 
 
