@@ -77,11 +77,44 @@ All infrastructure was decommissioned after validation to optimise cost.
 
 ---
 
-## Next Phase
+### Architecture Validation Screenshots
 
-- Enforce Identity-Aware Proxy (IAP)
-- Remove public access from Cloud Run
-- Optional: Cloud Armor integration
+#### Global HTTPS Load Balancer
+![Global HTTPS LB](screenshots/01-global-https-lb-overview.png)
+
+#### SSL Certificate (ACTIVE)
+![SSL Certificate](screenshots/02-ssl-certificate-active.png)
+
+#### Successful HTTPS Access via nip.io
+![HTTPS Working](screenshots/03-https-global-lb-working.png)
+
+#### Serverless Network Endpoint Groups (Multi-Region)
+![Serverless NEGs](screenshots/04-serverless-neg-multi-region.png)
+
+#### Cloud Run Backend Services
+![Cloud Run](screenshots/05-cloud-run-service.png)
+
+---
+
+## Cost Management Strategy
+
+All production-grade infrastructure was provisioned for validation and immediately decommissioned to minimise spend within GCP Free Tier constraints.
+
+This demonstrates real-world FinOps awareness alongside architectural capability.
+
+---
+
+## Security Hardening Roadmap (next steps)
+
+The validated deployment focused on TLS termination and multi-region availability.
+
+Next-stage enhancements for production readiness include:
+
+- Enforcing Identity-Aware Proxy (IAP) for zero-trust access
+- Restricting Cloud Run ingress to internal + load balancer only
+- Applying Cloud Armor WAF policies
+- Enforcing organisation policy constraints for public endpoint prevention
+
 
 
 
