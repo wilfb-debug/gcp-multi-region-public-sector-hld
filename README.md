@@ -1,29 +1,6 @@
-# GCP Multi-Region Public Sector Cloud Migration Framework (HLD)
+# GCP Multi-Region Public Sector Reference Architecture
 
-This project demonstrates the design and validation of a production-style, multi-region Google Cloud architecture suitable for public sector and regulated workloads.
-
-The solution includes:
-
-- Global HTTPS Load Balancer
-- Google-managed SSL certificate
-- Multi-region Serverless Network Endpoint Groups (NEGs)
-- Cloud Run backend services
-- TLS termination at the edge
-- Cost-aware decommissioning strategy
-
----
-
-## What This Demonstrates
-
-This repository validates practical capability in:
-
-- Designing global, highly available architectures
-- Implementing serverless multi-region backends
-- Configuring Google-managed SSL and TLS termination
-- Applying layered security patterns
-- Managing infrastructure lifecycle with cost awareness (FinOps mindset)
-
-All infrastructure was provisioned, validated, and decommissioned within GCP Free Tier constraints.
+Production-style, multi-region Google Cloud deployment validated using global HTTPS load balancing and managed TLS.
 
 ---
 
@@ -33,16 +10,28 @@ All infrastructure was provisioned, validated, and decommissioned within GCP Fre
 
 ---
 
-## Key Components
+## Architecture Summary
 
-- Global External HTTPS Load Balancer (Premium Tier / Anycast IP)
-- L7 URL Routing (URL Map)
-- Backend Service abstraction layer
-- Serverless Network Endpoint Groups (eu-west1 & eu-west2)
-- Multi-region Cloud Run deployment
-- TLS termination at Load Balancer
-- Ingress restricted to Load Balancer only
-- Planned Identity-Aware Proxy (IAP) enforcement
+This project demonstrates the design and validation of a highly available, globally distributed serverless architecture suitable for regulated and public-sector style workloads.
+
+### Core Components
+
+- Global HTTPS Load Balancer (Premium Tier)
+- Google-managed SSL certificate (ACTIVE)
+- Multi-region Serverless Network Endpoint Groups (NEGs)
+- Cloud Run backend services (europe-west1 & europe-west2)
+- TLS termination at the edge
+- Cost-controlled lifecycle (provision → validate → decommission)
+
+---
+
+## What This Demonstrates
+
+- Multi-region architecture design
+- Edge TLS configuration and certificate lifecycle management
+- Serverless backend integration with global load balancing
+- High availability patterns using regional redundancy
+- FinOps awareness within GCP Free Tier constraints
 
 ---
 
@@ -135,6 +124,7 @@ Next-stage enhancements for production readiness include:
 - Restricting Cloud Run ingress to internal + load balancer only
 - Applying Cloud Armor WAF policies
 - Enforcing organisation policy constraints for public endpoint prevention
+
 
 
 
