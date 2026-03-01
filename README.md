@@ -49,7 +49,7 @@ This project demonstrates the design and validation of a highly available, globa
 
 ### Successful Cloud Run Deployment (europe-west2)
 
-![Cloud Run Deployment Success](docs/evidence/01-cloud-run-deployment-success.png)
+![Cloud Run Deployment Success](docs/architecture/01-cloud-run-deployment-success.png)
 
 ---
 
@@ -124,6 +124,7 @@ Next-stage enhancements for production readiness include:
 - Restricting Cloud Run ingress to internal + load balancer only
 - Applying Cloud Armor WAF policies
 - Enforcing organisation policy constraints for public endpoint prevention
+
 
 
 
