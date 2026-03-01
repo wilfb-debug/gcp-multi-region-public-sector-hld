@@ -62,11 +62,27 @@ Architecture now follows zero-trust identity perimeter model.
 
 ---
 
+### HTTPS Validation
+
+Global HTTPS Load Balancer successfully provisioned with:
+
+- Google-managed SSL certificate (ACTIVE)
+- Serverless NEGs across multiple regions
+- Cloud Run backend services
+- Global static IP with TLS termination
+
+Validated using nip.io domain mapping for TLS verification.
+
+All infrastructure was decommissioned after validation to optimise cost.
+
+---
+
 ## Next Phase
 
 - Enforce Identity-Aware Proxy (IAP)
 - Remove public access from Cloud Run
 - Optional: Cloud Armor integration
+
 
 
 
