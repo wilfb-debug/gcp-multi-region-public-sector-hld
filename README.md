@@ -57,7 +57,7 @@ This project demonstrates the design and validation of a highly available, globa
 
 After removing public invoker permissions and restricting ingress to Load Balancer only, direct service access returns HTTP 403 (Forbidden):
 
-![Direct Access Forbidden](docs/evidence/02-direct-access-forbidden-after-hardening.png)
+![Direct Access Forbidden](docs/architecture/02-direct-access-forbidden-after-hardening.png)
 
 ---
 
@@ -124,6 +124,7 @@ Next-stage enhancements for production readiness include:
 - Restricting Cloud Run ingress to internal + load balancer only
 - Applying Cloud Armor WAF policies
 - Enforcing organisation policy constraints for public endpoint prevention
+
 
 
 
